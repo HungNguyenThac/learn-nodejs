@@ -1,0 +1,32 @@
+get hiện thị giao diện
+get hiển thị data trên browser
+hiển thị toàn bộ data: app.get /api/users
+hiển thị data theo id: app.get /api/users/:id
+
+post
+tạo mới bản ghi: app.post /api/users
+
+put
+update 1 bản ghi: app.put /api/users/:id
+
+delete
+xoá 1 bản ghi: app.delete /api/users/:id
+
+middleware: sử dụng next() để nhẩy sang function() tiếp theo của phương thức đó
+
+
+ajax 
+$.ajax ({
+    url: '/',
+    type: 'post/put/get/delete',
+    data: {
+        userName,
+        passWord,
+    }.
+})
+.then(data => {
+    console.log(data);
+})
+.catch(err => {
+    console.log(err)
+})

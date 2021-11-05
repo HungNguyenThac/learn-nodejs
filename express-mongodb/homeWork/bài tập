@@ -1,0 +1,16 @@
+get: lấy dữ liệu
+getall: 
+
+getone/:id lấy id qua body.params
+
+post: tạo, thêm data
+put/:id sửa data theo id chỉ định
+delete/:id xoá data theo id chỉ định
+
+bài tập với postman
+
+tạo tk: nếu user đã tồn tại, thì ko cho tạo với user đó
+
+đăng nhập: nếu user, pass khớp trong data thì đăng nhập ok, ko thì thất bại thất bại
+
+đổi mật khẩu: nếu user, pass sai, nhập pass mới, retype pass, faild, đúng thì cho đổi

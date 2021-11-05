@@ -1,0 +1,37 @@
+module.exports = {đối tượng1, đối tượng2,...}
+
+var inport = require('./file')
+
+path la 1 file có sẵn của javascript
+
+sử dụng path để tạo đường dẫn tuyệt đối, áp dụng trong trường hợp muốn sendFile, use lên sever
+
+Fs là file system, có sẵn trong javascript
+các phương thức thường dùng:
+
+writeFile('path-file', 'content', 'encoding", function(err) {bắt lỗi nếu viết file thất bại})
+
+appendFile('path-file', 'content append', "encoding", function(err){bắt lỗi nếu viết file thất bại})
+
+readFile('path-file', "encoding thường là utf8", function(err, data){
+    if(err){
+        bắt lỗi nếu đọc file thất bại
+        } else {
+            console.log(data)
+        }
+})
+
+unlink('path-file', function(err){bắt lỗi nếu xoá file thất bại})
+
+createWriteStream('path-file', 'encoding'): tạo ra một đường dẫn và gán vào 1 biến, gọi biến này .write để viết file nhiều lần
+
+createReadStream('path-file', 'encoding'): tạo ra một đường dẫn và gán vào 1 biến, gọi biến này từ đường dẫn này có thể đọc nhiều lần
+
+liên kết createRead và createWrite bằng pipe: 
+let write = fs.createWriteStream('./test.txt')
+// write.write('oke')
+
+let read = fs.createReadStream('./function.js', 'utf8')
+
+read.pipe(write)
+Example: read.pipe(write)
